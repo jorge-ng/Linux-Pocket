@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yeseva One'), local('YesevaOne'), url(http://www.alcancelibre.org/layout/quetzal_al/css/fonts/YesevaOne.woff2) format('woff2'), url(http://www.alcancelibre.org/layout/quetzal_al/css/fonts/YesevaOne.woff) format('woff');
+}

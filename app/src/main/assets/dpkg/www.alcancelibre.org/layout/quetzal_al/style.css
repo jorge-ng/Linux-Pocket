@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*==============================================================================
+  Title          : For Import Style Sheets
+  Author         : Fumito Arakawa as Phize (http://phize.net/) and Geeklog Japanese
+  Description    : Import style sheets.
+==============================================================================*/
+
+
+/* professional compatible */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/compatible.css");
+
+/* Basic */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/default.css");  /* デフォルトスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/common.css");  /* 共通スタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/layout.css");  /* 基本レイアウトスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/block.css");  /* ブロックスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/option.css");  /* オプションメニュースタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/form.css");  /* フォームスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/story.css");  /* 記事スタイル */
+
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/article/article.css");  /* 個別記事ページスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/comment/comment.css");  /* コメントスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/navbar/navbar.css");  /* ナビゲーションスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/preferences/preferences.css");  /* 設定ページスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/search/search.css");  /* 検索ページスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/stats/stats.css");  /* アクセス情報ページスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/submit/submit.css");  /* 投稿ページスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/trackback/trackback.css");  /* トラックバックスタイル */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/users/users.css");  /* アカウント情報ページスタイル */
+
+/* Admin */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/admin.css");  /* インポート用スタイルシート(管理者ページ) */
+
+/* Plugins */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/plugin.css");  /* インポート用スタイルシート(プラグイン) */
+
+/* Tooltips */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/css/tooltips/tooltips.css");
+
+/* Custom */
+@import url("http://www.alcancelibre.org/layout/quetzal_al/custom.css");  /* カスタムテーマスタイルシート */

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<!-- doctype -->
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+
+<!-- Mirrored from www.alcancelibre.org/staticpages/index.php/como-dpkg by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Feb 2019 16:30:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cómo utilizar dpkg - Alcance Libre</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="Content-Language" content="spanish">
+    <link rel="license" href="http://creativecommons.org/licenses/by/2.5/mx/" />
+    <link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/mx/" />
+    <link rel="SHORTCUT ICON" href="../../layout/quetzal_al/images/favicon.png" />
+    <link rel="canonical" href="http://www.alcancelibre.org/" />
+    <link rel="start contents" href="http://www.alcancelibre.org/" />
+    <script>SyntaxHighlighter.all();</script>
+    <link href='../../layout/quetzal_al/css/font_api.css' rel='stylesheet' type='text/css' />	
+<link rel="alternate" type="application/rss+xml" hreflang="es-mx" href="http://www.alcancelibre.org/backend/index.rss" title="RSS Feed: Alcance Libre" />
+<link rel="alternate" type="application/atom+xml" hreflang="es-mx" href="http://www.alcancelibre.org/backend/atom.xml" title="Atom Feed: Alcance Libre" /><link rel="home" href="http://www.alcancelibre.org/" title="Página Inicial" />
+<link rel="service" type="application/atomsvc+xml" href="http://www.alcancelibre.org/webservices/atom/?introspection" title="Webservices" /><link rel="stylesheet" type="text/css" href="../../layout/quetzal_al/style.css" />
+<link rel="stylesheet" type="text/css" href="../../forum/css/quetzal_al/forum.css" />
+<link rel="stylesheet" type="text/css" href="../../polls/css/default/style.css" />
+<script>
+var geeklog = {
+    doc: document,
+    win: window,
+    $: function (id) {
+        return this.doc.getElementById(id);
+    },
+    site_url:"http://www.alcancelibre.org",site_admin_url:"http://www.alcancelibre.org/admin",layout_url:"http://www.alcancelibre.org/layout/quetzal_al",xhtml:" /",lang:{iso639Code:"es",tooltip_loading:"Loading...",tooltip_not_found:"Help page is not found.",tooltip_select_date:"Click to select a date",tabs_more:"More..",confirm_delete:"¿Realmente quieres borrar este ítem?",confirm_send:"Send this?"},device:{isMobile:false,isTablet:false},theme_options:{}
+};
+</script>
+<link rel="canonical" href="como-dpkg.html" /><link rel="stylesheet" type="text/css" href="../../captcha/style.css" />
+<link rel="stylesheet" type="text/css" href="../../captcha/jquery/QapTcha.jquery.html" media="screen"  /><link rel="stylesheet" type="text/css" href="http://www.alcancelibre.org/forum/css/smilies.css.php" /></head>
+<body dir="ltr" class="left-center">
+<div id="container">
+<!-- == Seccion de Usuario Menu == -->
+<div id="menu_user">
+    &nbsp;<a href="http://www.alcancelibre.org/users.php?mode=new"><img alt="Nuevo usuario" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/nuevo_user.png" />&nbsp;Nuevo Usuario</a> | 
+      <a href="http://www.alcancelibre.org/users.php?mode=login"><img alt="entrar" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/entrar.png" />&nbsp;Entrar</a>&nbsp;
+</div>
+<!-- == Seccion de Usuario Menu == -->
+<div id="slogan_al">
+<p><strong>La libertad del conocimiento al alcance de quien la busca.</strong></p>
+</div>	
+<div id="headercenter">
+<div id="lztq" class="">
+<img src="http://www.alcancelibre.org/layout/quetzal_al/images/cr.png" id="placeholder" alt="Alcance Libre" />
+</div>
+</div>
+
+<div id="h_wrap">
+    <div id="headeral">
+      <div id="headeral-content" class="type1">
+	<h1 class="site_name"><a href="http://www.alcancelibre.org/"><img src="http://www.alcancelibre.org/layout/quetzal_al/images/logo-al.png" alt="Alcance Libre" /></a></h1>
+      </div>
+    </div>
+</div>
+  <hr class="separator" />
+<div id="n_wrap">
+  <!-- MENUS -->
+  <div id="navigation" role="navigation">
+<div id="menu-top" style="font-size:9pt;">
+<ul>
+<li><a href="http://www.alcancelibre.org/" ><img alt="Portada" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/home.png">&nbsp;Portada</a></li>
+<li><a href="http://www.alcancelibre.org/forum/"><img alt="Foro" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/foro.png">&nbsp;Foros</a></li>
+<li><a href="http://www.alcancelibre.org/staticpages/index.php/manuales-indice"><img alt="Manuales" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/manual.png">&nbsp;Manuales</a></li>
+<li><a href="http://www.alcancelibre.org/filemgmt/" ><img alt="Descargar" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/descarga.png">&nbsp;Descargas</a></li>
+<li><a href="http://www.alcancelibre.org/staticpages/index.php/notas-lanzamiento-aldos-1-4"><img alt="ALDOS" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/aldos.png">&nbsp;ALDOS</a></li>
+<li><a onclick="window.open(this.href, 'blank'); return false;" href="http://www.alcance-empresarial.com/"><img alt="Servicios" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/servicios.png">&nbsp;Servicios</a></li>
+<li><a onclick="window.open(this.href, 'blank'); return false;" href="http://www.alcance-empresarial.com/capacitacion/cursos-linux/"><img alt="Cursos" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/cursos.png">&nbsp;Cursos Linux</a></li>
+<li><a onclick="window.open(this.href, 'blank'); return false;" href="http://lms.alcance-empresarial.com/"><img alt="LMS" src="http://www.alcancelibre.org/layout/quetzal_al/images/menus/lms.png">&nbsp;Aula virtual</a></li>
+</ul>
+</div>
+  </div>
+  <!-- MENUS -->
+</div>
+  <hr class="separator" />
+  <div id="wrapper">
+
+    <!--[if !IE]> Win IE 6<![endif]-->
+    <!--[if !IE]> <![endif]-->
+    <!--[if !IE]> #centerblocks { <![endif]-->
+    <!-- Bloque Central -->
+    <div id="centerblocks" role="main">
+	
+<!-- ************** -->
+<!-- *Inicio promo* -->
+<!-- ************** -->
+	<style>
+		#slideshow { 
+		    margin: 2px auto; 
+		    position: relative; 
+		    width: 728px; 
+		    height: 90px; 
+		    padding: 10px; 
+		    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+		}
+		
+		#slideshow > div { 
+		    position: absolute; 
+		    top: 10px; 
+		    left: 10px; 
+		    right: 10px; 
+		    bottom: 10px; 
+		}
+	</style>
+	<script src="http://www.alcancelibre.org/layout/quetzal_al/javascript/jquery.min.js"></script>
+	<script>
+		$(function() {
+		
+			$("#slideshow > div:gt(0)").hide();
+	
+			setInterval(function() { 
+			  $('#slideshow > div:first')
+			    .fadeOut(1000)
+			    .next()
+			    .fadeIn(1000)
+			    .end()
+			    .appendTo('#slideshow');
+			},  6500);
+			
+		});
+	</script>
+
+<div style="text-align:center;padding:4px;">
+<script src="http://de.anunciospatrocinados.com/2bdabc3177202e56de377cd46afff67b/A20883F9/anunciospatrocinados.js"></script>
+<script>ANUNCIOS_EXP__(725, 75, 1, 'linux, apache, sendmail, postfix, nginx, samba, gnome, mate, antivirus, clamav, wifi, routers, webmail, website, hosting, server, servidor, cloud, computing');</script>
+</div>
+
+<div id="slideshow">
+	   <div>
+	     <a href="http://www.alcancelibre.org/article.php/curso-centos-6"><img alt="Cursos Servidores con Centos 6" src="http://www.alcancelibre.org/images/curso-server.jpg"></a>
+	   </div>
+	   <div>
+	     <a href="http://www.alcancelibre.org/staticpages/index.php/notas-lanzamiento-aldos-1-4" ><img alt="Sistema Operativo ALDOS" src="http://www.alcancelibre.org/images/aldo-sistem.jpg" width="728" height="90"></a>
+	   </div>
+           <div>
+             <a href="#"><img alt="MongoDB Banner" src="http://www.alcancelibre.org/images/mdb_banner3.png"></a>
+           </div>
+	   <div>
+	     <a href="http://www.alcance-empresarial.com/capacitacion/cursos-de-programacion/curso-de-programacion-en-php/"><img alt="Curso PHP" src="http://www.alcancelibre.org/images/curso-php-al.jpg" width="728" height="90"></a>
+	   </div>
+           <div>
+             <a href="http://www.dezoft.com/" target="_blank"><img alt="Dezoft" src="http://www.alcancelibre.org/images/banner-dezoft-1.jpg"></a>
+           </div>
+<!--
+	   <div>
+	     Algún Texto Informativo...
+	   </div>
+-->
+	</div>
+
+<!-- ************** -->
+<!-- * Fin Promo *  -->
+<!-- ************** -->
+<p style="font-size:7pt;text-align:center;">Si algunos de nuestros <a href="http://www.alcancelibre.org/forum/">foros</a>, <a href="http://www.alcancelibre.org/staticpages/index.php/manuales-indice">manuales</a>, <a style="font-weight:700;" href="http://www.alcancelibre.org/staticpages/index.php/notas-lanzamiento-aldos-1-4">ALDOS</a>, <a href="http://www.alcancelibre.org/al/server/">paqueter&iacute;a</a> o <a href="http://www.alcancelibre.org/staticpages/index.php/parrillada">proyectos</a> te han resultado de ayuda, <a style="font-weight:700;" href="http://www.alcancelibre.org/staticpages/index.php/donar">apreciaremos mucho nos apoyes con un donativo</a>.</p>	
+
+
+<!-- blockheader.thtml { -->
+
+<div class="block-center">
+  <h2>Cómo utilizar dpkg</h2>
+  <div class="block-center-content">
+
+<!-- } blockheader.thtml -->
+<div id="HOTWordsTxt">
+
+<address><b>Autor:</b> Joel Barrios Dueñas<br>
+<b>Correo electrónico:</b> <a href="http://www.alcancelibre.org/forum/">darkshram
+en gmail punto com</a></address>
+<address><b>Sitio de Red:</b> <a href="http://www.alcancelibre.org/" target="_top">http://www.alcancelibre.org/</a><br>
+<b>Jabber ID:</b> darkshram@jabber.org</address>
+<!-- Blanca, este documento va dedicado a ti. -->
+<p style="text-align: left; text-indent: 0pt;"><small><b>Creative
+Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/es/">Reconocimiento-NoComercial-CompartirIgual
+2.1</a></b></small></p>
+
+
+<blockquote>
+<p style="text-align: justify; text-indent: 0pt;"><small>©
+1999-2007 Joel Barrios Dueñas. Usted es libre de copiar, distribuir y
+comunicar públicamente la obra y hacer obras derivadas bajo las
+condiciones siguientes: a) Debe reconocer y citar al autor original. <b>b)
+No puede utilizar esta obra para fines comerciales (incluyendo su
+publicación, a través de cualquier medio, por entidades con fines de
+lucro).</b> c) Si altera o transforma esta obra o genera una
+obra derivada, sólo puede distribuir la obra generada bajo una licencia
+idéntica a ésta. Al reutilizar o distribuir la obra, tiene que dejar
+bien claro los términos de la licencia de esta obra. Alguna de estas
+condiciones puede no aplicarse si se obtiene el permiso del titular de
+los derechos de autor. Los derechos derivados de usos legítimos u otras
+limitaciones no se ven afectados por lo anterior. Licencia completa en <a href="http://creativecommons.org/licenses/by-nc-sa/2.1/es/legalcode.es">castellano</a>.
+La información contenida en este documento y los derivados de éste se
+proporcionan tal cual son y los autores no asumirán responsabilidad
+alguna si el usuario o lector hace mal uso de éstos.</small></p>
+
+
+</blockquote>
+<h2>Introducción.</h2>
+<h3>Acerca de dpkg.</h3>
+
+<p><span style="font-weight: bold;">Dpkg</span> fue originalmente creado por <span style="font-weight: bold;">Matt Welsh</span>, <span style="font-weight: bold;">Carl Streeter</span> e <span style="font-weight: bold;">Ian Murduck</span> y escrito en ese entonces en <span style="font-weight: bold;">Perl</span>. Posteriormente el programa fue reescrito en C por <span style="font-weight: bold;">Ian&nbsp;Jackson</span> en 1993. <span style="font-weight: bold;">Dpkg</span> es una abreviatura de <span style="font-style: italic;">Debian package</span>. Se trata de un equipamiento lógico utilizado para la gestión de paquetería en <span style="font-weight: bold;">Debian Linux</span> y distribuciones de GNU/Linux basadas sobre <span style="font-weight: bold;">Debian Linux</span>, como es el caso de <b>Ubuntu Linux</b>.
+Es una herramienta de bajo nivel que permite la instalación,
+desinstalación y consulta de información de paquetes con extensión .deb. Herramientas de alto nivel como <span style="font-weight: bold;">apt</span>, <span style="font-weight: bold;">aptitude</span> o <span style="font-weight: bold;">synaptic</span> lo utilizan, siendo estás dos últimas las más sofisticadas.</p>
+
+<h2>Procedimientos.</h2>
+
+<h3>Consultas.</h3>
+
+<p>Si se&nbsp;quiere
+obtener una lista completa de los paquetes instalados en el sistema,
+junto con versión una descripción breve de los mismo, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -l</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere consultar si están instalados paquetes que contengan una cadena de caracteres en particular, como por ejemplo apache, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpgk -l "*apache*"</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere una descripción más detallada de los mismos, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -s</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se desea consultar la versión e información breve de un solo paquete instalado en el sistema, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -l paquete</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se&nbsp;quiere una descripción más detallada del paquete, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -s paquete</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere consultar solo las dependencias de un paquete instalado en el sistema, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -s paquete | grep ^Depends:</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se desea consultar la información de un paquete .deb sin instalar, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -l paquete-no-instalado.deb</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si
+se desea consultar la información completa de un paquete, que incluye
+versión, descripción, arquitectura, grupo, autor que mantiene el
+paquete y dependencias, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -p paquete</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere ver un listado de los componentes que provee un paquete instalado, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -L paquete</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere ver un listado de los componentes que provee un paquete antes de ser instalado, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -c paquete-no-instalado.deb</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere saber a que paquete pertenece un archivo u otro componente instalado en el sistema, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -S /cualquier/elemento/en/el/sistema</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<h3>Instalación de paquetes.</h3>
+
+<p>Si se quiere instalar un paquete .deb, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -i paquete-no-instalado.deb</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere instalar o actualizar un paquete .deb, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -Gi paquete-no-instalado.deb</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+Si solo se quiere desempaquetar el contenido sin instalar, se puede utilizar:<br><center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -x paquete-no-instalado.deb</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si
+se tiene un directorio lleno de paquetes .deb y se desea instalar todos
+estos, se puede utilizar lo siguiente, considerando para el ejemplo que
+el directorio <span style="font-weight: bold;">~/Downloads/</span> contiene varios paquetes .deb:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -R ~/Downloads/</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se desea presentar cualesquiera que sean las opciones de configuración de un paquete, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg --configure paquete-no-instalado.deb</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<h3>Desinstalación de paquetes.</h3>
+
+<p>Si se quiere desinstalar un paquete, pero dejando presentes archivos de configuración, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -r paquete</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Si se quiere desinstalar un paquete, incluyendo los archivos de configuración, se puede utilizar:</p>
+
+<center>
+<table bgcolor="#efefef" border="0" cellpadding="4"
+ cellspacing="0" width="85%">
+  <tbody>
+    <tr>
+      <td valign="top" width="100%">
+      <pre>dpkg -P paquete</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center></div>
+
+<!-- blockfooter.thtml { -->
+
+  </div>
+</div>
+
+<!-- } blockfooter.thtml -->
+ <p class="aligncenter">
+    Última Edición: 29/05/2008, 13:39<span style="padding-left:5px;padding-right:5px">|</span>    Accesos: 67,648     <a href="http://www.alcancelibre.org/staticpages/index.php/como-dpkg/print"><img src="http://www.alcancelibre.org/layout/quetzal_al/images/print.gif" title="Listo para imprimir" alt="Ver la versión para imprimir" /></a></p>
+
+<!-- footer.thtml { -->
+</div>
+<!-- } centerblocks -->
+    
+    <!--[if !IE]> Win IE 6<![endif]-->
+    <!--[if !IE]> <![endif]-->
+    <!--[if !IE]> } #centerblocks <![endif]-->
+<div id="side">
+<!-- <p class="skip"><a href="#footer"></a></p>   -->
+
+ <!--[if !IE]> Using conditional comments to avoid Win IE 6 bugs. <![endif]-->
+<!--[if !IE]> (When combined with multiple floating elements, floating bug duplicate last element content) <![endif]-->
+<!-- leftblocks.thtml { -->
+
+    <!-- #leftblocks { -->
+    <!-- Left Blocks Container -->
+    <div id="leftblocks">
+
+	<!-- === FORMULARIO DE BUSQUEDA === -->
+<div class="block-left" id="block-left-search">
+  <form method="get" id="searchform" action="http://www.alcancelibre.org/search.php">
+    <div>
+     <input type="hidden" name="type" value="all" />
+     <input value="Buscar..." name="query" id="s" onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}" type="text" />
+     <input type="hidden" name="mode" value="search" />			
+     <input id="searchsubmit" value="Buscar" type="submit" />
+    </div>
+   </form>
+   
+ <hr />  
+ 
+ <!-- Bloque Social Media -->
+<div>   
+<table style="border-collapse: separate; border-spacing: 4px;">
+  <tr>
+    <th><a href="http://www.alcancelibre.org/staticpages/index.php/donar" title="Aporta Donativo"><img alt="Donar" src="http://www.alcancelibre.org/layout/quetzal_al/images/socialmedia/paypal.png"></a></th>
+    <th><a onclick="javascript:window.open('https://twitter.com/Darkshram'); return false;" href="https://twitter.com/Darkshram" title="S&iacute;guenos en Twitter"><img alt="Twitter" src="http://www.alcancelibre.org/layout/quetzal_al/images/socialmedia/twitter.png"></a></th>
+	<th><a onclick="javascript:window.open('https://www.facebook.com/Alcancelibre'); return false;" href="https://www.facebook.com/Alcancelibre" title="S&iacute;guenos en Facebook"><img alt="Facebook" src="http://www.alcancelibre.org/layout/quetzal_al/images/socialmedia/facebook.png"></a></th>
+  </tr>
+</table>
+</div>   
+<!-- Bloque Social Media -->
+
+</div>
+	<!-- === FORMULARIO DE BUSQUEDA === -->
+
+      
+<!-- blockheader-left.thtml { -->
+
+    <div class="block-left">
+      <h2>Sondeo</h2>
+      <div class="block-left-content">
+
+<!-- } blockheader-left.thtml -->
+
+<span class="floatright"></span><div class="poll-topic">Navegador predeterminado de ALDOS</div>
+<div class="poll-topic_description"></div>
+<form action="http://www.alcancelibre.org/polls/index.php" name="Vote" method="post" class="uk-form">
+    <div>
+    <input type="hidden" name="pid" value="navegador-predeterminado" />
+            <div class="poll-questions">
+    <p class="poll-question">¿Cuál debe ser el navegador predeterminado en ALDOS?</p>
+    <p class="poll-description"></p>
+    <ul>
+    <li><input type="radio" name="aid[0][]" value="1" />&nbsp;Firefox (opción actual)</li>
+<li><input type="radio" name="aid[0][]" value="2" />&nbsp;Qupzilla</li>
+<li><input type="radio" name="aid[0][]" value="3" />&nbsp;Otter Browser</li>
+<li><input type="radio" name="aid[0][]" value="4" />&nbsp;Seamonkey</li>
+<li><input type="radio" name="aid[0][]" value="5" />&nbsp;Chromium</li>
+    </ul>
+</div>
+        <span class="pluginTinyText"></span><br />
+        <input type="submit" value="Voto" />
+        <a href="http://www.alcancelibre.org/polls/index.php?pid=navegador-predeterminado&amp;aid=-1">Resultados</a>    </div>
+</form>
+
+<div class="pluginTinyText">
+    <a href="http://www.alcancelibre.org/polls/index.php">Otros sondeos</a> | 568 votantes 
+| <a href="http://www.alcancelibre.org/polls/index.php?pid=navegador-predeterminado#comments">0 comentarios</a>
+
+</div>
+
+
+
+<!-- blockfooter-left.thtml { -->
+
+      </div>
+    </div>
+
+<!-- } blockfooter-left.thtml -->
+
+<!-- blockheader-left.thtml { -->
+
+    <div class="block-left">
+      <h2>Conectados...</h2>
+      <div class="block-left-content">
+
+<!-- } blockheader-left.thtml -->
+Usuarios invitados: 813<br />
+<!-- blockfooter-left.thtml { -->
+
+      </div>
+    </div>
+
+<!-- } blockfooter-left.thtml -->
+    </div>
+    <!--[if !IE]> } #leftblocks <![endif]-->
+
+    <hr class="separator" />
+
+<!-- } leftblocks.thtml -->
+
+ </div>
+
+</div>
+<!-- } #wrapper -->
+
+<hr class="separator" />
+
+  <!-- #f_wrap { -->
+  <div id="f_wrap">
+  <!-- #footer { -->
+  <div id="footer" role="contentinfo">
+<p class="back"><a href="#headeral">SUBIR</a></p>
+
+<table style="width:100%">
+  <tr>
+    <td style="text-align:left">Puede consultar nuestra Política de Privacidad en <a href="http://www.alcancelibre.org/staticpages/index.php/politica-de-privacidad">este enlace</a>.<br /><br />&copy; 1999-2018 AlcanceLibre.org. Salvo que se indique lo contrario, todo el contenido est&aacute; disponible bajo los t&eacute;rminos de la licencia <a onclick="window.open(this.href, 'licencia', 'width=800,height=480,scrollbars,resizable'); return false;" href="http://creativecommons.org/licenses/by/2.5/mx/">Creative Commons Reconocimiento 2.5</a>.<br /><span style="font-size:8pt;">¿Necesita servicio de soporte técnico en Linux o cotizar algún servicio relacionado con Linux?<br />Informes: <!-- (52) (961) 223-6244 y -->(52) (961) 125-0890 (Tuxtla Gutiérrez, Chiapas, México)<br />de lunes a viernes de 10:00-19:00 GMT -06:00</span>.<br /><a href="http://www.geeklog.net/" onclick="window.open(this.href, 'blank'); return false;"><img src="http://www.alcancelibre.org/layout/quetzal_al/images/cms-geeklog.png" style="border:0px;" alt="Sitio creado con Geeklog"></a><br /></td>
+    <td><div style="margin-top:10px"><img alt="Zimbra Reseller" src="http://www.alcancelibre.org/images/Zimbra-Authorized-Value-Added-Reseller.png"></div></td>		
+  </tr>
+</table>
+  </div>
+  <!-- } #footer -->
+</div>  
+  <!-- } #f_wrap -->
+</div>  
+<!-- } #container -->
+
+    <script src="http://www.alcancelibre.org/javascript/common.js"></script>
+<script src="http://www.alcancelibre.org/javascript/jquery.min.js"></script>
+<script src="http://www.alcancelibre.org/layout/quetzal_al/javascript/confirm.js"></script>
+<script src="http://www.alcancelibre.org/layout/quetzal_al/javascript/fix_html.js"></script>
+
+
+<script>
+<!--
+  FixHTML('leftblocks', 'centerblocks', 'rightblocks');
+-->
+</script>
+
+<!--
+Inspirado en el tema original: 
+[Quetzal Ver. 1.0 [Alcance Libre] creado por:
+Tereso Ramos G - tramos@d-webstudio.com
+
+Basado en la plantilla: 
+newspaper Ver1.2
+Por: Masuko Koeda as みるく (http://white-stage.com/)
+
+[Quetzal Ver. 2.0 [Alcance Libre] creado por:
+Diseño: William Lopez Jimenez : https://koalasoft.wordpress.com
+-->
+
+<!-- hotwords -->
+<!-- <script src="http://ads7608.hotwords.com/show.jsp?id=7608&cor=005F00"></script> -->
+<script src="http://ads7608.hotwords.com/show.jsp?id=7608&amp;cor=005F00&amp;tag=div&amp;atr=class&amp;vatr=post-body%20entry-content"></script>
+<!-- hotwords -->
+</body>
+
+<!-- Mirrored from www.alcancelibre.org/staticpages/index.php/como-dpkg by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Feb 2019 16:30:36 GMT -->
+</html>
